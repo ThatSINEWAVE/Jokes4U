@@ -4,6 +4,8 @@
 
 Welcome to Jokes4U, a simple web application where you can enjoy a variety of jokes at the click of a button!
 
+![Jokes4U](https://github.com/ThatSINEWAVE/Jokes4U/assets/133239148/3d57588a-aa61-4768-82ae-1da74d50a871)
+
 </div>
 
 ## Features

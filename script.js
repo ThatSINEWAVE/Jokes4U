@@ -11,9 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const anotherJokeButton = document.getElementById('another-joke');
     const chooseAgainButton = document.getElementById('choose-again');
     const categoriesDiv = document.getElementById('categories');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.querySelector('body');
 
     let lastAction = null;
     let jokeType = 'single'; // default to single part joke
+
+    // Load user's theme preference from localStorage
+    const userTheme = localStorage.getItem('theme');
+    if (userTheme === 'dark') {
+        body.classList.add('dark');
+        themeToggle.checked = true;
+    }
+
+    // Update toggle button position based on user's theme preference
+    themeToggle.checked = body.classList.contains('dark');
+
+    themeToggle.addEventListener('change', () => {
+        body.classList.toggle('dark');
+        localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
 
     randomJokeButton.addEventListener('click', () => {
         fadeOut(buttonsDiv, () => {

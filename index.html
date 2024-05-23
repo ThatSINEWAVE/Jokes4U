@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jokes4U</title>
@@ -11,8 +11,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="site-data/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="site-data/favicon-16x16.png">
     <link rel="manifest" href="site-data/site.webmanifest">
-</head>
-<body>
+  </head>
+  <body>
     <header>
       <label class="switch">
         <input type="checkbox" id="theme-toggle">
@@ -20,23 +20,26 @@
       </label>
     </header>
     <div id="app">
-        <h1 id="title">Jokes4U</h1>
-        <div id="buttons">
-            <button id="random-joke">Random Joke</button>
-            <button id="choose-category">Choose a Category</button>
+      <div class="icon">
+        <img src="Jokes.png" alt="Icon">
+      </div>
+      <h1 id="title">Jokes4U</h1>
+      <div id="buttons">
+        <button id="random-joke">Random Joke</button>
+        <button id="choose-category">Choose a Category</button>
+      </div>
+      <div id="joke-type-buttons" class="hidden">
+        <button id="single-part">Single Part</button>
+        <button id="two-part">Two Part</button>
+      </div>
+      <div id="joke-container" class="hidden">
+        <p id="joke"></p>
+        <div id="joke-buttons">
+          <button id="another-joke">Get Another Joke</button>
+          <button id="choose-again">Choose Something Else</button>
         </div>
-        <div id="joke-type-buttons" class="hidden">
-            <button id="single-part">Single Part</button>
-            <button id="two-part">Two Part</button>
-        </div>
-        <div id="joke-container" class="hidden">
-            <p id="joke"></p>
-            <div id="joke-buttons">
-                <button id="another-joke">Get Another Joke</button>
-                <button id="choose-again">Choose Something Else</button>
-            </div>
-        </div>
-        <div id="categories" class="hidden"></div>
+      </div>
+      <div id="categories" class="hidden"></div>
     </div>
     <footer>
       <a href="https://discord.com/invite/2nHHHBWNDw" target="_blank">
@@ -50,5 +53,5 @@
       </a>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
